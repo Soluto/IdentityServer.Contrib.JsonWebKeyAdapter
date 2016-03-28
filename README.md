@@ -18,4 +18,4 @@ Implement the ```ISigningService``` interface. Than, register it:
 ```
 
 See the simple test in this repo for a complete exmaple.
-Also notice that you have to override the default implementation of ```ITokenSigningService``` from identity server, as the default implementation is using ```X509Certificate``` in order to sing the JWT.
+Also notice that you have to override the default implementation of ```ITokenSigningService``` from identity server, as the default implementation is using ```X509Certificate``` in order to sign the JWT.
