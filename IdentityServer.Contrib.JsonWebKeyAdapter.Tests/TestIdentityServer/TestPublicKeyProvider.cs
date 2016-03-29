@@ -9,11 +9,11 @@ using Microsoft.IdentityModel.Protocols;
 
 namespace IdentityServer.Contrib.JsonWebKeyAdapter.Tests.TestIdentityServer
 {
-    public class TestSigningService : ISigningService
+    public class TestPublicKeyProvider : IPublicKeyProvider
     {
         private readonly RSACryptoServiceProvider mService;
 
-        public TestSigningService()
+        public TestPublicKeyProvider()
         {
             mService = new RSACryptoServiceProvider(2048);
         }
