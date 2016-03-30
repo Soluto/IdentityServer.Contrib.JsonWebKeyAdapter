@@ -1,9 +1,9 @@
 # IdentityServer.Contrib.JsonWebKeyAdapter
-A small nuget package allow to work with JsonWebKey instead of X509Certificate.
-This is usefull when the key are stored in HSM for example, and the private key cannot be extracted. In this cases, it is easier to represent the public key as JsonWebKey instead of X509Certificate.
+A small library that allows working with JsonWebKey instead of X509Certificate.
+This is useful when the key is stored in HSM and the private key cannot be extracted for example. In these cases, it is easier to represent the public key as JsonWebKey instead of X509Certificate.
 
 ##Getting Started:##
-Implement the ```ISigningService``` interface. Than, register it:
+Implement the ```ISigningService``` interface and register it:
 
 ```csharp
     var factory = new IdentityServerServiceFactory();
@@ -19,4 +19,4 @@ Implement the ```ISigningService``` interface. Than, register it:
 ```
 
 See the simple test in this repo for a complete exmaple.
-Also notice that you have to override the default implementation of ```ITokenSigningService``` from identity server, as the default implementation is using ```X509Certificate``` in order to sign the JWT.
+Note that you have to override the identity server's default implementation of ```ITokenSigningService``` as the it is using ```X509Certificate``` to sign the JWT.
