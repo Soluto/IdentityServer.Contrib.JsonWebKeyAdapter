@@ -9,7 +9,8 @@ This is useful when the key is stored in HSM and the private key cannot be extra
 ```csharp
     var factory = new IdentityServerServiceFactory();
     var testSingingService = new TestSigningService();
-    factory.SigningKeyService = new Registration<ISigningKeyService>(new SigningKeyService(<<Your implementation of IPublicKeyProvider>>));
+    factory.SigningKeyService = new Registration<ISigningKeyService>(
+                new SigningKeyService(<<Your implementation of IPublicKeyProvider>>));
     var options = new IdentityServerOptions
       {
         RequireSsl = false,
