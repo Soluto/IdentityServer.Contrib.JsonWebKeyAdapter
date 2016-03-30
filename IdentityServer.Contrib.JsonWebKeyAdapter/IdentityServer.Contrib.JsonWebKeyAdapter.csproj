@@ -73,7 +73,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ISigningService.cs" />
+    <Compile Include="IPublicKeyProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SigningKeyService.cs" />
     <Compile Include="X509CertificateFactory.cs" />

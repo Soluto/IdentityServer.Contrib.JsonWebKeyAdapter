@@ -10,7 +10,7 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter.Tests.TestIdentityServer
         {
             var factory = new IdentityServerServiceFactory();
             factory.UseInMemoryClients(Clients.Get()).UseInMemoryScopes(Scopes.Get()).UseInMemoryUsers(Users.Get());
-            var testSingingService = new TestSigningService();
+            var testSingingService = new TestPublicKeyProvider();
             factory.TokenSigningService = new Registration<ITokenSigningService>(new TokenSigningService(testSingingService));
             factory.SigningKeyService = new Registration<ISigningKeyService>(new SigningKeyService(testSingingService));
             var options = new IdentityServerOptions

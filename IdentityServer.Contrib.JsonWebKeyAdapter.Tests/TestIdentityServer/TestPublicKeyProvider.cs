@@ -18,7 +18,7 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter.Tests.TestIdentityServer
             mService = new RSACryptoServiceProvider(2048);
         }
 
-        public Task<IEnumerable<JsonWebKey>> GetPublicKeysAsync()
+        public Task<IEnumerable<JsonWebKey>> GetAsync()
         {
             var exportParameters = mService.ExportParameters(false);
             var jwk = new JsonWebKey

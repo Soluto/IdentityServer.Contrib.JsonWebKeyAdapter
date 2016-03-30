@@ -12,11 +12,11 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter.Tests.TestIdentityServer
 {
     public class TokenSigningService : ITokenSigningService
     {
-        private readonly TestSigningService mSigningService;
+        private readonly TestPublicKeyProvider mPublicKeyProvider;
 
-        public TokenSigningService(TestSigningService signingService)
+        public TokenSigningService(TestPublicKeyProvider publicKeyProvider)
         {
-            mSigningService = signingService;
+            mPublicKeyProvider = publicKeyProvider;
         }
 
         /// <summary>
@@ -106,7 +106,7 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter.Tests.TestIdentityServer
         {
             var payload = CreatePayload(token);
 
-            return mSigningService.EncodeToSignedJWTAsync(payload);
+            return mPublicKeyProvider.EncodeToSignedJWTAsync(payload);
         }
     }
 }

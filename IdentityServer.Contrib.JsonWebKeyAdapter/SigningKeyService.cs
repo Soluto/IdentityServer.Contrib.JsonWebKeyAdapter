@@ -9,11 +9,11 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter
 {
     public class SigningKeyService : ISigningKeyService
     {
-        private readonly ISigningService mSigningService;
+        private readonly IPublicKeyProvider mPublicKeyProvider;
 
-        public SigningKeyService(ISigningService signingService)
+        public SigningKeyService(IPublicKeyProvider publicKeyProvider)
         {
-            mSigningService = signingService;
+            mPublicKeyProvider = publicKeyProvider;
         }
 
         public Task<X509Certificate2> GetSigningKeyAsync()
@@ -23,7 +23,7 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter
 
         public async Task<IEnumerable<X509Certificate2>> GetPublicKeysAsync()
         {
-            var publicKeys = await mSigningService.GetPublicKeysAsync();
+            var publicKeys = await mPublicKeyProvider.GetAsync();
             return publicKeys.Select(X509CertificateFactory.GenerateCertificate);
         }
 

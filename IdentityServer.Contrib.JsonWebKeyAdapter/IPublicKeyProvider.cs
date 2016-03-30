@@ -4,8 +4,8 @@ using Microsoft.IdentityModel.Protocols;
 
 namespace IdentityServer.Contrib.JsonWebKeyAdapter
 {
-    public interface ISigningService
+    public interface IPublicKeyProvider
     {
-        Task<IEnumerable<JsonWebKey>> GetPublicKeysAsync();
+        Task<IEnumerable<JsonWebKey>> GetAsync();
     }
 }

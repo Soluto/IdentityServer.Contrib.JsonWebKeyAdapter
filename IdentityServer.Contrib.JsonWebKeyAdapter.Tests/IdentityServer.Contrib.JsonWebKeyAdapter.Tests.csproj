@@ -109,7 +109,7 @@
     <Compile Include="TestIdentityServer\TokenResponse.cs" />
     <Compile Include="TestIdentityServer\TokenSigningService.cs" />
     <Compile Include="TestIdentityServer\Users.cs" />
-    <Compile Include="TestIdentityServer\TestSigningService.cs" />
+    <Compile Include="TestIdentityServer\TestPublicKeyProvider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
