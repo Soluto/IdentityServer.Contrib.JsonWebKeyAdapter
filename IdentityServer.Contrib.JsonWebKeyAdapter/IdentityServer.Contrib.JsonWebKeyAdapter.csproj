@@ -76,7 +76,8 @@
     <Compile Include="IPublicKeyProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SigningKeyService.cs" />
-    <Compile Include="X509CertificateFactory.cs" />
+    <Compile Include="JsonWebKeyExtensions.cs" />
+    <Compile Include="X509CertificateExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -12,9 +12,9 @@ using Org.BouncyCastle.X509;
 
 namespace IdentityServer.Contrib.JsonWebKeyAdapter
 {
-    public class X509CertificateFactory
+    public static  class JsonWebKeyExtensions
     {
-        public static X509Certificate2 GenerateCertificate(JsonWebKey publicKey)
+        public static X509Certificate2 ToX509Certtificate(this JsonWebKey publicKey)
         {
             if (publicKey.Kty != "RSA")
             {
@@ -66,10 +66,9 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter
                 new ExtendedKeyUsage(KeyPurposeID.IdKPServerAuth));
 
             var newCert = gen.Generate(kpgen.GenerateKeyPair().Private);
-            return new X509Certificate2(newCert.GetEncoded())
-            {
-                FriendlyName = publicKey.Kid
-            };
+            var certificate = new X509Certificate2(newCert.GetEncoded());
+            certificate.SetKeyId(publicKey.Kid);
+            return certificate;
         }
     }
 }

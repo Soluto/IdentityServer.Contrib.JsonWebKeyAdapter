@@ -24,12 +24,12 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter
         public async Task<IEnumerable<X509Certificate2>> GetPublicKeysAsync()
         {
             var publicKeys = await mPublicKeyProvider.GetAsync();
-            return publicKeys.Select(X509CertificateFactory.GenerateCertificate);
+            return publicKeys.Select(key => key.ToX509Certtificate());
         }
 
         public Task<string> GetKidAsync(X509Certificate2 certificate)
         {
-            return Task.FromResult(certificate.FriendlyName);
+            return Task.FromResult(certificate.GetKeyId());
         }
     }
 }
