@@ -16,7 +16,7 @@ namespace IdentityServer.Contrib.JsonWebKeyAdapter
     {
         public static X509Certificate2 ToX509Certtificate(this JsonWebKey publicKey)
         {
-            if (publicKey.Kty != "RSA" && publicKey.Kty != "RSA-HSM")
+            if (publicKey.Kty != "RSA")
             {
                 throw new NotImplementedException();
             }
