@@ -2,9 +2,13 @@
 A small library that allows working with JsonWebKey instead of X509Certificate.
 This is useful when the key is stored in HSM and the private key cannot be extracted for example. In these cases, it is easier to represent the public key as JsonWebKey instead of X509Certificate.
 
-Master build: [![Build status](https://ci.appveyor.com/api/projects/status/i3wf58puk4u6xkho?svg=true)](https://ci.appveyor.com/project/Soluto/identityserver-contrib-jsonwebkeyadapter)
+Build status: [![Build status](https://ci.appveyor.com/api/projects/status/i3wf58puk4u6xkho?svg=true)](https://ci.appveyor.com/project/Soluto/identityserver-contrib-jsonwebkeyadapter)
+
+Nuget: [![NuGet version](https://img.shields.io/nuget/v/IdentityServer.Contrib.JsonWebKeyAdapter.svg?maxAge=2592000)](https://www.nuget.org/packages/IdentityServer.Contrib.JsonWebKeyAdapter)
 
 ##Getting Started:##
+* Install the package:
+  ```Install-Package IdentityServer.Contrib.JsonWebKeyAdapter```
 * Implement the ```IPublicKeyProvider``` interface.
 * Register the ```ISigningKeyService``` that come with this library, and provide your ``IPublicKeyProvider`` implementation:
 
