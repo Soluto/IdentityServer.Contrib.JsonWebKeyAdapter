@@ -9,12 +9,10 @@ Master build: [![Build status](https://ci.appveyor.com/api/projects/status/i3wf5
 
 ```csharp
     var factory = new IdentityServerServiceFactory();
-    var testSingingService = new TestSigningService();
     factory.SigningKeyService = new Registration<ISigningKeyService>(
                 new SigningKeyService(<<Your implementation of IPublicKeyProvider>>));
     var options = new IdentityServerOptions
       {
-        RequireSsl = false,
         Factory = factory,
       };
 
