@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>Omer Levi Hevroni</authors>
+    <owners>Soluto</owners>
+    <licenseUrl>https://github.com/Soluto/IdentityServer.Contrib.JsonWebKeyAdapter/blob/master/LICENSE.md</licenseUrl>
+    <projectUrl>https://github.com/Soluto/IdentityServer.Contrib.JsonWebKeyAdapter</projectUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>A small nuget package allow to work with JsonWebKey instead of X509Certificate</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2016</copyright>
+    <tags></tags>
+  </metadata>
+</package>
