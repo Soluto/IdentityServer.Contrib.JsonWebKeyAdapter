@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-    <id>$id$</id>
+    <id>IdentityServer.Contrib.JsonWebKeyAdapter</id>
     <version>$version$</version>
-    <title>$title$</title>
+    <title>IdentityServer.Contrib.JsonWebKeyAdapter</title>
     <authors>Omer Levi Hevroni</authors>
     <owners>Soluto</owners>
     <licenseUrl>https://github.com/Soluto/IdentityServer.Contrib.JsonWebKeyAdapter/blob/master/LICENSE.md</licenseUrl>
