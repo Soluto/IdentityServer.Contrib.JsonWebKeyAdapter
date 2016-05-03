@@ -25,7 +25,7 @@ See the simple test in this repo for a complete exmaple.
 Note that you have to override the identity server's default implementation of ```ITokenSigningService``` as it is using ```X509Certificate``` to sign the JWT.
 
 ## Contributing
-Thanks for thinking about contributing! We are looking for contributions of any sort and size - features, bug fixes, documentation or anything else that you think will make shisell better.
+Thanks for thinking about contributing! We are looking for contributions of any sort and size - features, bug fixes, documentation or anything else that you think will make it better.
 * Fork and clone locally
 * Create a topic specific branch
 * Add a cool feature or fix a bug
