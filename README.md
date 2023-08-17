@@ -1,3 +1,6 @@
+## DEPRECATED
+This repository is no longer maintained and has been archived. Feel free to browse the code, but please migrate to other solutions.
+
 # IdentityServer.Contrib.JsonWebKeyAdapter
 A small library that allows working with JsonWebKey instead of X509Certificate.
 This is useful when the key is stored in HSM and the private key cannot be extracted for example. In these cases, it is easier to represent the public key as JsonWebKey instead of X509Certificate.
